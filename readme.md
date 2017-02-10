@@ -1,5 +1,5 @@
 ### Description
 - Information Security 
-- Cryptograph and Crypanalyze
+- Cryptograph and Cryptanalyze
 
 ### Simple Subsitution
