@@ -22,7 +22,7 @@ int main (int argc, const char *argv[])
 	PrintSbox(sbox);
 	
 	printf("----after %d bytes generation----\n", key_stream_len);
-	unsigned char *key_steram = malloc(key_stream_len);
+	unsigned char *key_steram = (unsigned char*) malloc(key_stream_len);
 	RC4KeystreamGeneration(sbox, key_steram, key_stream_len);
 	PrintSbox(sbox);
 
@@ -99,7 +99,7 @@ void RC4KeystreamGeneration(unsigned char sbox[16][16], unsigned char *key_stera
 
 void Swap(unsigned char *a, unsigned char *b)
 {
-	*a = *a ^ *b;
-	*b = *a ^ *b;
-	*a = *a ^ *b;
+	unsigned char tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
