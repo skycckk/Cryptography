@@ -1,5 +1,12 @@
-### Description
-- Information Security 
+## Description
+- Information Security
 - Cryptography and Cryptanalysis
 
-### Simple Subsitution
+## Simple Substitution
+
+## Symmetric Key Crypto
+- Stream cipher - RC4
+- Block cipher - TEA (Tiny Encryption Algorithm)
+
+## Public Key Crypto
+- RSA
