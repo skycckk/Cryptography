@@ -10,3 +10,8 @@
 
 ## Public Key Crypto
 - RSA
+
+## Hash Function
+- Tiger hash
+- MD5
+- Steganography
