@@ -4,6 +4,9 @@
 # Unignore all with extensions
 !*.*
 
+# DS_Store
+*.DS_Store
+
 # Prerequisites
 *.d
 
