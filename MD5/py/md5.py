@@ -19,40 +19,17 @@ def md5_cmp(file_path1, file_path2, file_path1a, file_path2a):
         # Read the whole file at once
         data2 = binary_file.read()
 
-    data3 = bytearray(data1)
-    data4 = bytearray(data2)
-
     target_name = 'Stamp'
     target_name_new = 'Huang'
-    for i in range(len(data1) - len(target_name)):
 
-        target_found = True
-        for j in range(len(target_name)):
-            if data3[i + j] != ord(target_name[j]):
-                target_found = False
-                break
-
-        if target_found:
-            # replace the string
-            for j in range(len(target_name)):
-                data3[i + j] = ord(target_name_new[j])
-
-        target_found = True
-        for j in range(len(target_name)):
-            if data4[i + j] != ord(target_name[j]):
-                target_found = False
-                break
-
-        if target_found:
-            # replace the string
-            for j in range(len(target_name)):
-                data4[i + j] = ord(target_name_new[j])
+    data1 = data1.replace(bytearray(target_name, 'utf-8'), bytearray(target_name_new, 'utf-8'))
+    data2 = data2.replace(bytearray(target_name, 'utf-8'), bytearray(target_name_new, 'utf-8'))
 
     with open(file_path1a, "wb") as binary_file:
-        binary_file.write(data3)
+        binary_file.write(data1)
 
     with open(file_path2a, "wb") as binary_file:
-        binary_file.write(data4)
+        binary_file.write(data2)
 
 
 file_1 = "../MD5_collision/rec2.ps"
