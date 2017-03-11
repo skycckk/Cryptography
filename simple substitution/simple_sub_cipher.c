@@ -217,7 +217,7 @@ char* ReadCiphertext(const char *file_path)
     while ((c = fgetc(fp)) != EOF)
     {
         char new_c = (char)c;
-        if ((new_c > 'a' && new_c < 'z') || (new_c > 'A' && new_c < 'Z'))
+        if ((new_c >= 'a' && new_c <= 'z') || (new_c >= 'A' && new_c <= 'Z'))
         	len++;
     }
 
@@ -227,7 +227,7 @@ char* ReadCiphertext(const char *file_path)
     while ((c = fgetc(fp)) != EOF)
     {
     	int new_c = (char)c;
-    	if ((new_c > 'a' && new_c < 'z') || (new_c > 'A' && new_c < 'Z'))
+    	if ((new_c >= 'a' && new_c <= 'z') || (new_c >= 'A' && new_c <= 'Z'))
     	{
     		ctext[len] = new_c;
     		len++;
